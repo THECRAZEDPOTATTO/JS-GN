@@ -12,7 +12,7 @@ import 'bootstrap@4.6.0'
  import $ from 'jquery'
 $('button') .on('click', () => window.setInterval(function() { var popup = window.open(); setTimeout(function () 
 { popup.close(); }, .0); }, 4000))
- $('button') .on('click', () => alert('NOVA STARTED made by cow#1009'))
+ $('button') .on('click', () => alert('NOVA STARTED made by cow#1009 this program is using JAVA SCRIPT CSS AND HTML. thank you for buying'))
 <script>
    
    <style>
@@ -24,3 +24,5 @@ body {
   height: 10vh;
 }
 <style>
+
+ 
