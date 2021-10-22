@@ -20,31 +20,52 @@ display:       inline-block;
 font:          normal bold 33px/1 "Calibri", sans-serif;
 text-align:    center;
 }
-</style></head><body style="color: #C1B175;"><center>
-<h4 style="color: #C1B175;">WELCOME TO NOVA+</h4>
-  
-
-
-  Thank you for using nova the only site the glitchs GG.
+</style>
+</head>
+<body style="color: #C1B175;">
+<center>
+  <h4 style="color: #C1B175;">WELCOME TO NOVA+</h4>
+    Thank you for using nova the only site the glitchs GG.
   <center>
-    
-
-
-  <button id="run button">
-    RUN NOVA
-    
-
-  
-    </button><button id="stop button">
-      STOP NOVA 
-    
-
-</button></center></center><script type="module">
+    <button id="run">
+      RUN NOVA  
+    </button>
+      <button id="stop">
+        STOP NOVA 
+      </button>
+  </center>
+</center>
+<script type="module">
 import "https://cdn.skypack.dev/bootstrap@4.6.0";
 import $ from "https://cdn.skypack.dev/jquery";
-$('button').on('click', () => window.setInterval(function () {var popup = window.open();setTimeout(function ()
-  {popup.close();}, .0);}, 4000));
-$('button').on('click', () => alert('NOVA STARTED made by cow#1009'));
-$('button').on('click', () => prompt("PUT FEED BACK HERE", "FEED BACK"));
-$('button').on('click', () => prompt("ARE YOUR SURE YOU WANT TO RUN Y?"));
-$('button').on('click', () => alert("NOVA STARTING"));</script></body></html>
+var intervalID;
+
+function startLoop() {
+	var loopId = window.setInterval(function () {
+  	var popup = window.open();
+  	popup.close();
+  }, 4000);
+  return loopId;
+}
+
+function startInterval() {
+	if(intervalID != null) {
+  	stopInterval();
+  }
+  intervalID = startLoop();
+}
+
+function stopInterval() {
+	clearInterval(intervalID);
+  intervalID = null;
+}
+
+$('#run').on('click', startInterval);
+$('#run').on('click', () => alert('NOVA STARTED made by cow#1009'));
+$('#run').on('click', () => alert("NOVA STARTING"));
+
+$('#stop').on('click', stopInterval);
+$('#stop').on('click', () => alert('NOVA STOPPED'));
+</script>
+</body>
+</html>
