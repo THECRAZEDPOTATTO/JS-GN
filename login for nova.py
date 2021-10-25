@@ -169,7 +169,7 @@ def main_account_screen():
 main_account_screen()
 print("make sure after running open your browser to be redirected.")
 print("PLEASE WAIT AFTER LOGGING IN")
-sleep(2)
+sleep(15)
 import webbrowser
 
 webbrowser.open('https://github.com/THECRAZEDPOTATTO/JS-GN')
